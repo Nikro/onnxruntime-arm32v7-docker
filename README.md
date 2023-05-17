@@ -1,5 +1,6 @@
 # onnxruntime arm32v7 docker-cooker
 A docker-cross-compilation-cooker for your arm32v7.
+There's also a python wheel pre-compiled and packaged, might be useful for some.
 
 ## Step 1.
 Clone the repo: https://github.com/microsoft/onnxruntime - into a folder (i.e. /home/nikro/onnxruntime).
