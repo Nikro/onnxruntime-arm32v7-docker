@@ -1,0 +1,12 @@
+--- build/Linux/Release/_deps/eigen-src/Eigen/src/SparseCore/CompressedStorage.h.orig	2023-05-16 22:26:13.206925184 +0000
++++ build/Linux/Release/_deps/eigen-src/Eigen/src/SparseCore/CompressedStorage.h	2023-05-16 22:26:29.007283813 +0000
+@@ -90,7 +90,8 @@
+     {
+       if (m_allocatedSize<size)
+       {
+-        Index realloc_size = (std::min<Index>)(NumTraits<StorageIndex>::highest(),  size + Index(reserveSizeFactor*double(size)));
++        Index realloc_size = (std::min<Index>)(std::numeric_limits<int>::max(),  size + Index(reserveSizeFactor*double(size)));
++
+ 
+         if(realloc_size<size)
+           internal::throw_std_bad_alloc();
